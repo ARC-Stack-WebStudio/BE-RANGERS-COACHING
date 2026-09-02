@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="400" height="300" viewBox="0 0 400 300">
+  <!-- Background -->
+  <rect width="400" height="300" fill="#F5F5F5"/>
+  
+  <!-- Gradient overlay -->
+  <defs>
+    <linearGradient id="grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0B1F3A;stop-opacity:0.1" />
+      <stop offset="100%" style="stop-color:#C9A227;stop-opacity:0.1" />
+    </linearGradient>
+  </defs>
+  <rect width="400" height="300" fill="url(#grad)"/>
+  
+  <!-- Icon -->
+  <circle cx="200" cy="80" r="40" fill="#C9A227" opacity="0.8"/>
+  <path d="M 200 60 L 210 90 L 240 90 L 215 110 L 225 140 L 200 120 L 175 140 L 185 110 L 160 90 L 190 90 Z" fill="#FFFFFF"/>
+  
+  <!-- Text -->
+  <text x="200" y="180" font-family="Arial, sans-serif" font-size="18" font-weight="bold" text-anchor="middle" fill="#0B1F3A">
+    BE RANGERS COACHING
+  </text>
+  <text x="200" y="210" font-family="Arial, sans-serif" font-size="12" text-anchor="middle" fill="#64748B">
+    Premium Coaching Institute
+  </text>
+  <text x="200" y="235" font-family="Arial, sans-serif" font-size="11" text-anchor="middle" fill="#64748B">
+    Excellence in Education
+  </text>
+  <text x="200" y="255" font-family="Arial, sans-serif" font-size="10" text-anchor="middle" fill="#999999">
+    Quality Education • Trusted Results
+  </text>
+</svg>

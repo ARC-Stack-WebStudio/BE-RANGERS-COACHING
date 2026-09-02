@@ -1,0 +1,72 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400">
+  <!-- Background Circle -->
+  <defs>
+    <linearGradient id="bgGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#C9A227;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#E5C76B;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="textGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#FFFFFF;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#FAF8F2;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+
+  <!-- Outer Circle (Navy Background) -->
+  <circle cx="200" cy="200" r="195" fill="#0B1F3A" stroke="#C9A227" stroke-width="2"/>
+
+  <!-- Gold Inner Circle -->
+  <circle cx="200" cy="200" r="180" fill="url(#bgGradient)"/>
+
+  <!-- Inner Navy Circle -->
+  <circle cx="200" cy="200" r="170" fill="#061426"/>
+
+  <!-- Shield/Badge Background -->
+  <path d="M 200 80 Q 280 100 280 180 Q 280 280 200 320 Q 120 280 120 180 Q 120 100 200 80 Z" fill="#0B1F3A" stroke="#C9A227" stroke-width="2.5"/>
+
+  <!-- Gold Accent on Shield -->
+  <path d="M 200 95 Q 270 115 270 180 Q 270 270 200 310 Q 130 270 130 180 Q 130 115 200 95 Z" fill="none" stroke="#C9A227" stroke-width="2" opacity="0.6"/>
+
+  <!-- Trophy/Victory Symbol -->
+  <!-- Trophy Cup -->
+  <g transform="translate(200, 140)">
+    <!-- Trophy Handles -->
+    <path d="M -15 -20 Q -35 -30 -35 -10" fill="none" stroke="#E5C76B" stroke-width="3" stroke-linecap="round"/>
+    <path d="M 15 -20 Q 35 -30 35 -10" fill="none" stroke="#E5C76B" stroke-width="3" stroke-linecap="round"/>
+    
+    <!-- Trophy Cup Bowl -->
+    <ellipse cx="0" cy="-15" rx="20" ry="15" fill="#E5C76B"/>
+    <path d="M -20 -15 L -15 5 Q 0 15 15 5 L 20 -15" fill="#C9A227" stroke="#E5C76B" stroke-width="1.5"/>
+    
+    <!-- Trophy Stem -->
+    <rect x="-3" y="5" width="6" height="20" fill="#C9A227"/>
+    
+    <!-- Trophy Base -->
+    <ellipse cx="0" cy="30" rx="25" ry="5" fill="#E5C76B"/>
+    <path d="M -25 30 L -20 35 Q 0 40 20 35 L 25 30" fill="#C9A227"/>
+  </g>
+
+  <!-- Star Burst (Achievement Symbol) -->
+  <g transform="translate(200, 140)">
+    <circle cx="0" cy="-32" r="3" fill="#E5C76B"/>
+    <circle cx="12" cy="-28" r="2.5" fill="#E5C76B" opacity="0.8"/>
+    <circle cx="-12" cy="-28" r="2.5" fill="#E5C76B" opacity="0.8"/>
+    <circle cx="18" cy="-15" r="2" fill="#E5C76B" opacity="0.7"/>
+    <circle cx="-18" cy="-15" r="2" fill="#E5C76B" opacity="0.7"/>
+  </g>
+
+  <!-- Text: BE RANGERS -->
+  <text x="200" y="280" font-family="'Playfair Display', serif" font-size="28" font-weight="700" text-anchor="middle" fill="url(#textGradient)" letter-spacing="1">
+    BE RANGERS
+  </text>
+
+  <!-- Text: COACHING (Smaller) -->
+  <text x="200" y="310" font-family="'Poppins', sans-serif" font-size="14" font-weight="600" text-anchor="middle" fill="#E5C76B" letter-spacing="1.5" text-transform="uppercase">
+    COACHING
+  </text>
+
+  <!-- Decorative Line Top -->
+  <line x1="140" y1="65" x2="260" y2="65" stroke="#C9A227" stroke-width="1.5" opacity="0.6"/>
+
+  <!-- Decorative Line Bottom -->
+  <line x1="140" y1="330" x2="260" y2="330" stroke="#C9A227" stroke-width="1.5" opacity="0.6"/>
+</svg>

@@ -1,0 +1,73 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800">
+  <defs>
+    <linearGradient id="heroBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0B1F3A;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#061426;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#1a2f4d;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="accentGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#C9A227;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#E5C76B;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1200" height="800" fill="url(#heroBg)"/>
+
+  <!-- Geometric Pattern - Left Side -->
+  <circle cx="100" cy="150" r="80" fill="#C9A227" opacity="0.1"/>
+  <circle cx="150" cy="250" r="60" fill="#E5C76B" opacity="0.08"/>
+  <rect x="50" y="500" width="200" height="200" fill="#C9A227" opacity="0.05" transform="rotate(-30 150 600)"/>
+
+  <!-- Geometric Pattern - Right Side -->
+  <circle cx="1100" cy="100" r="100" fill="#E5C76B" opacity="0.08"/>
+  <circle cx="1050" cy="650" r="70" fill="#C9A227" opacity="0.1"/>
+  <path d="M 950 400 L 1100 300 L 1100 500 Z" fill="#C9A227" opacity="0.06"/>
+
+  <!-- Central Content Area -->
+  <g transform="translate(600, 400)">
+    <!-- Large Trophy Symbol -->
+    <g transform="scale(2)">
+      <!-- Trophy Handles -->
+      <path d="M -15 -20 Q -35 -30 -35 -10" fill="none" stroke="#C9A227" stroke-width="2.5" stroke-linecap="round"/>
+      <path d="M 15 -20 Q 35 -30 35 -10" fill="none" stroke="#C9A227" stroke-width="2.5" stroke-linecap="round"/>
+      
+      <!-- Trophy Cup -->
+      <ellipse cx="0" cy="-15" rx="20" ry="15" fill="#E5C76B"/>
+      <path d="M -20 -15 L -15 5 Q 0 15 15 5 L 20 -15" fill="#C9A227" stroke="#E5C76B" stroke-width="1.5"/>
+      
+      <!-- Trophy Stem -->
+      <rect x="-3" y="5" width="6" height="20" fill="#C9A227"/>
+      
+      <!-- Trophy Base -->
+      <ellipse cx="0" cy="30" rx="25" ry="5" fill="#E5C76B"/>
+      <path d="M -25 30 L -20 35 Q 0 40 20 35 L 25 30" fill="#C9A227"/>
+    </g>
+
+    <!-- Star Burst -->
+    <g transform="translate(-50, -100)">
+      <polygon points="0,-15 3,-5 13,-5 6,2 9,12 0,6 -9,12 -6,2 -13,-5 -3,-5" fill="#E5C76B" opacity="0.9"/>
+    </g>
+    <g transform="translate(50, -120)">
+      <polygon points="0,-12 2.5,-4 11,-4 5,1.5 7.5,10 0,5 -7.5,10 -5,1.5 -11,-4 -2.5,-4" fill="#E5C76B" opacity="0.7"/>
+    </g>
+    <g transform="translate(80, -80)">
+      <polygon points="0,-10 2,-3 9,-3 4,1 6,8 0,4 -6,8 -4,1 -9,-3 -2,-3" fill="#C9A227" opacity="0.6"/>
+    </g>
+  </g>
+
+  <!-- Title Section -->
+  <g transform="translate(600, 700)">
+    <text x="0" y="0" font-family="'Playfair Display', serif" font-size="48" font-weight="900" text-anchor="middle" fill="#E5C76B" letter-spacing="2">
+      BE RANGERS COACHING
+    </text>
+    <text x="0" y="50" font-family="'Poppins', sans-serif" font-size="24" font-weight="500" text-anchor="middle" fill="#FAF8F2" letter-spacing="0.5">
+      Excellence in Education
+    </text>
+  </g>
+
+  <!-- Decorative Elements -->
+  <line x1="200" y1="750" x2="1000" y2="750" stroke="#C9A227" stroke-width="2" opacity="0.4"/>
+  <circle cx="200" cy="750" r="4" fill="#E5C76B"/>
+  <circle cx="1000" cy="750" r="4" fill="#E5C76B"/>
+</svg>

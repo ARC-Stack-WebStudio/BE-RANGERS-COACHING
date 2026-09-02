@@ -1,0 +1,112 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 600">
+  <defs>
+    <linearGradient id="topperbg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#FFD700;stop-opacity:0.1" />
+      <stop offset="100%" style="stop-color:#FFA500;stop-opacity:0.05" />
+    </linearGradient>
+    <linearGradient id="faceBgTopper" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#FDBCB4;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#F5A794;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="goldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#FFD700;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#FFA500;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="400" height="600" fill="url(#topperbg)"/>
+
+  <!-- Top Banner - Achievement Badge -->
+  <rect width="400" height="80" fill="url(#goldGrad)"/>
+  <text x="200" y="35" font-family="'Playfair Display', serif" font-size="24" font-weight="900" text-anchor="middle" fill="#0B1F3A" letter-spacing="2">
+    TOP PERFORMER
+  </text>
+  <text x="200" y="60" font-family="'Poppins', sans-serif" font-size="14" font-weight="600" text-anchor="middle" fill="#061426" letter-spacing="1">
+    98.5% ACHIEVEMENT
+  </text>
+
+  <!-- Medal/Star Burst -->
+  <g transform="translate(200, 120)">
+    <!-- Large Star -->
+    <polygon points="0,-35 8,-12 33,-12 15,5 23,28 0,11 -23,28 -15,5 -33,-12 -8,-12" fill="#FFD700" stroke="#FFA500" stroke-width="1.5"/>
+    <!-- Inner Star -->
+    <polygon points="0,-28 5,-10 26,-10 11,2 17,22 0,10 -17,22 -11,2 -26,-10 -5,-10" fill="#FFF" opacity="0.3"/>
+  </g>
+
+  <!-- Profile Picture Section -->
+  <g transform="translate(200, 230)">
+    <!-- Profile Circle Background -->
+    <circle cx="0" cy="0" r="70" fill="#0B1F3A" stroke="#FFD700" stroke-width="3"/>
+    
+    <!-- Head -->
+    <circle cx="0" cy="-10" r="45" fill="url(#faceBgTopper)"/>
+    
+    <!-- Hair -->
+    <path d="M -45 -10 Q -55 -35 -35 -55 Q -15 -65 0 -66 Q 20 -65 35 -55 Q 60 -35 50 -10" fill="#1a1a1a"/>
+    
+    <!-- Face Details -->
+    <circle cx="-15" cy="-25" r="4" fill="#333"/>
+    <circle cx="15" cy="-25" r="4" fill="#333"/>
+    <circle cx="-14" cy="-25" r="1.5" fill="#fff" opacity="0.6"/>
+    <circle cx="16" cy="-25" r="1.5" fill="#fff" opacity="0.6"/>
+    
+    <line x1="0" y1="-18" x2="0" y2="-5" stroke="#D4A574" stroke-width="1.5"/>
+    
+    <path d="M -12 -2 Q 0 2 12 -2" stroke="#C9A788" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+    
+    <!-- Neck -->
+    <rect x="-15" y="35" width="30" height="20" fill="url(#faceBgTopper)"/>
+  </g>
+
+  <!-- Name and Details Section -->
+  <g transform="translate(200, 340)">
+    <text x="0" y="0" font-family="'Playfair Display', serif" font-size="24" font-weight="700" text-anchor="middle" fill="#0B1F3A">
+      Rishab Sharma
+    </text>
+    <text x="0" y="30" font-family="'Poppins', sans-serif" font-size="12" font-weight="600" text-anchor="middle" fill="#C9A227" letter-spacing="1" text-transform="uppercase">
+      SSC Class 10
+    </text>
+  </g>
+
+  <!-- Achievement Box -->
+  <g transform="translate(200, 410)">
+    <rect x="-130" y="0" width="260" height="120" fill="#FAF8F2" rx="10" stroke="#C9A227" stroke-width="2"/>
+    
+    <!-- Achievement Items -->
+    <g transform="translate(-100, 20)">
+      <circle cx="15" cy="0" r="5" fill="#FFD700"/>
+      <text x="30" y="5" font-family="'Poppins', sans-serif" font-size="11" font-weight="600" fill="#0B1F3A">98.5% Score</text>
+      <text x="30" y="20" font-family="'Poppins', sans-serif" font-size="9" fill="#64748B">Exceptional Performance</text>
+    </g>
+    
+    <g transform="translate(30, 20)">
+      <circle cx="15" cy="0" r="5" fill="#FFD700"/>
+      <text x="30" y="5" font-family="'Poppins', sans-serif" font-size="11" font-weight="600" fill="#0B1F3A">All Subjects</text>
+      <text x="30" y="20" font-family="'Poppins', sans-serif" font-size="9" fill="#64748B">90%+ in All Subjects</text>
+    </g>
+    
+    <g transform="translate(-100, 65)">
+      <circle cx="15" cy="0" r="5" fill="#FFD700"/>
+      <text x="30" y="5" font-family="'Poppins', sans-serif" font-size="11" font-weight="600" fill="#0B1F3A">Topper Award</text>
+      <text x="30" y="20" font-family="'Poppins', sans-serif" font-size="9" fill="#64748B">School & Coaching Topper</text>
+    </g>
+    
+    <g transform="translate(30, 65)">
+      <circle cx="15" cy="0" r="5" fill="#FFD700"/>
+      <text x="30" y="5" font-family="'Poppins', sans-serif" font-size="11" font-weight="600" fill="#0B1F3A">Merit Holder</text>
+      <text x="30" y="20" font-family="'Poppins', sans-serif" font-size="9" fill="#64748B">State Merit List</text>
+    </g>
+  </g>
+
+  <!-- Quote Section -->
+  <g transform="translate(200, 560)">
+    <text x="0" y="0" font-family="'Poppins', sans-serif" font-size="10" font-style="italic" text-anchor="middle" fill="#0B1F3A" font-weight="500" max-width="350">
+      "BE RANGERS transformed my learning approach"
+    </text>
+  </g>
+
+  <!-- Decorative Elements -->
+  <circle cx="30" cy="30" r="4" fill="#FFD700" opacity="0.4"/>
+  <circle cx="370" cy="550" r="5" fill="#FFD700" opacity="0.3"/>
+</svg>
