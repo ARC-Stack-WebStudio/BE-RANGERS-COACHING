@@ -54,9 +54,9 @@
     <circle cx="-18" cy="-15" r="2" fill="#E5C76B" opacity="0.7"/>
   </g>
 
-  <!-- Text: BE RANGERS -->
+  <!-- Text: BE RANKERS -->
   <text x="200" y="280" font-family="'Playfair Display', serif" font-size="28" font-weight="700" text-anchor="middle" fill="url(#textGradient)" letter-spacing="1">
-    BE RANGERS
+    BE RANKERS
   </text>
 
   <!-- Text: COACHING (Smaller) -->

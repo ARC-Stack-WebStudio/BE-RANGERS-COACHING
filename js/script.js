@@ -215,7 +215,7 @@ if (enquiryModalForm) {
         
         showNotification('Enquiry submitted! Redirecting to WhatsApp...', 'success');
         
-        const whatsappMessage = `Hello BE RANGERS COACHING,\n\nI am interested in the ${studentClass} course.\n\nStudent Name: ${studentName}\nPhone: ${mobile}\n\nPlease share the course details and fees.\n\nThank you!`;
+        const whatsappMessage = `Hello BE RANKERS COACHING,\n\nI am interested in the ${studentClass} course.\n\nStudent Name: ${studentName}\nPhone: ${mobile}\n\nPlease share the course details and fees.\n\nThank you!`;
         
         enquiryModalForm.reset();
         
@@ -241,7 +241,7 @@ function isValidEmail(email) {
 }
 
 function generateWhatsAppMessage(studentName, parentName, mobile, studentClass, message) {
-    return `Hello BE RANGERS COACHING,\n\nI would like to inquire about the ${studentClass} course.\n\n` +
+    return `Hello BE RANKERS COACHING,\n\nI would like to inquire about the ${studentClass} course.\n\n` +
         `Student Name: ${studentName}\n` +
         `Parent Name: ${parentName}\n` +
         `Phone: ${mobile}\n` +
@@ -482,6 +482,6 @@ document.querySelectorAll('a, button, input, select, textarea').forEach(element 
 });
 
 // ========== CONSOLE LOG ==========
-console.log('%c BE RANGERS COACHING', 'font-size: 24px; font-weight: bold; color: #C9A227; font-family: Arial;');
+console.log('%c BE RANKERS COACHING', 'font-size: 24px; font-weight: bold; color: #C9A227; font-family: Arial;');
 console.log('%c Premium Coaching Website', 'font-size: 14px; color: #0B1F3A;');
 console.log('Website by ARC Stack Web Studio');
