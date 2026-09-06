@@ -192,7 +192,7 @@ a:hover {
 
 .brand-logo-img {
     width: 46px;
-    height: 40px;
+    height: 45px;
     display: inline-block;
     border-radius: 50%;
     object-fit: contain;
@@ -380,13 +380,21 @@ a:hover {
 .hero-content {
     position: relative;
     z-index: 3;
-    text-align: center;
+    /* text-align: center; */
     color: var(--white);
     height: 100%;
 }
 
 .hero-text {
     animation: fadeInUp 1s ease-out;
+    padding-left: 30px;
+}
+
+.brand-logo-img-rankers{
+    width: 48px;
+    height: 47px;
+    margin-bottom: 10px;
+    border-radius: 10%;
 }
 
 .hero-eyebrow {
@@ -400,14 +408,14 @@ a:hover {
 }
 
 .hero-heading {
-    font-size: clamp(3rem, 8vw, 5rem);
+    font-size: 55px;
     font-weight: 900;
     margin-bottom: 1.5rem;
     line-height: 1.1;
 }
 
 .hero-subheading {
-    font-size: clamp(1.5rem, 4vw, 2.5rem);
+    font-size: 30px;
     font-weight: 300;
     margin-bottom: 1rem;
     color: var(--accent-light);
@@ -416,14 +424,14 @@ a:hover {
 .hero-description {
     font-size: 1.1rem;
     max-width: 600px;
-    margin: 0 auto 2.5rem;
+    /* margin: 0 auto 2.5rem; */
     opacity: 0.95;
 }
 
 .hero-cta-group {
     display: flex;
     gap: 1.5rem;
-    justify-content: center;
+    /* justify-content: center; */
     flex-wrap: wrap;
     margin-bottom: 3rem;
 }
