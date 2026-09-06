@@ -30,6 +30,7 @@
 
     <!-- Custom CSS -->
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/gallery.css">
 </head>
 
 <body>
@@ -63,49 +64,370 @@
         </div>
     </nav>
 
-    <!-- ========== HERO SECTION ========== -->
-    <section id="home" class="hero-section">
-        <video class="hero-video" autoplay muted loop playsinline poster="assets/images/hero-poster.svg">
-            <source src="assets/videos/classes dummy vid.mp4" type="video/mp4">
-        </video>
-        <div class="hero-overlay"></div>
+    <!-- ========== GALLERY SECTION ========== -->
+    <section id="gallery" class="gallery-section py-5">
+        <div class="container-lg">
 
-        <div class="container-fluid hero-content">
-            <div class="row align-items-center justify-content-center h-100">
-                <div class="col-12 col-lg-7 text-white hero-text">
-                    <div class="hero-eyebrow">Excellence in Education</div>
-                    <h1 class="hero-heading"><span><img src="assets/images/BE RANKERS Logo.jpeg" alt="BE RANKERS Logo"
-                                class="brand-logo-img-rankers"></span> BE RANKERS COACHING</h1>
-                    <p class="hero-subheading">The Secret of Success. Most trustable Coaching classes in Bhiwandi.</p>
-                    <p class="hero-description">
-                        Premier coaching institute in Bhiwandi preparing students for SSC, CBSE, JEE, NEET, and MHT-CET
-                        exams.
-                    </p>
+            <!-- Section Header -->
+            <div class="text-center mb-5">
+                <div class="section-label">Our Gallery</div>
 
-                    <div class="hero-cta-group">
-                        <button class="btn btn-hero-primary" data-bs-toggle="modal" data-bs-target="#enquiryModal">
-                            <i class="bi bi-chat-dots"></i> Enquire Now
-                        </button>
-                        <a href="tel:9373072406" class="btn btn-hero-secondary">
-                            <i class="bi bi-telephone"></i> Call: 9373072406
-                        </a>
-                    </div>
+                <h2 class="section-heading">
+                    Moments That <span>Inspire</span>
+                </h2>
 
-                    <div class="hero-trust">
-                        <span class="trust-badge">✓ Trusted by 500+ Students</span>
+                <p class="section-description mx-auto">
+                    Take a glimpse into the learning environment, activities,
+                    achievements, celebrations and memorable moments at
+                    BE RANKERS COACHING.
+                </p>
+            </div>
+
+            <!-- Gallery Grid -->
+            <div class="row g-4 gallery-grid">
+
+                <!-- Gallery Item 1 -->
+                <div class="col-6 col-md-4 col-lg-3">
+                    <div class="gallery-card">
+                        <img src="assets/images/Gallery/Gallery BE RANKERS (1).jpeg" alt="BE RANKERS Coaching Classroom"
+                            loading="lazy">
+
+                        <div class="gallery-overlay">
+                            <div class="gallery-content">
+                                <span class="gallery-category">Classroom</span>
+                                <h3>Learning Environment</h3>
+
+                                <button class="gallery-view" data-bs-toggle="modal" data-bs-target="#galleryModal"
+                                    data-image="assets/images/gallery/gallery-1.jpg" data-title="Learning Environment">
+                                    <i class="bi bi-arrows-fullscreen"></i>
+                                </button>
+                            </div>
+                        </div>
                     </div>
                 </div>
-                <div class="col-lg-5">
 
+
+                <!-- Gallery Item 2 -->
+                <div class="col-6 col-md-4 col-lg-3">
+                    <div class="gallery-card">
+                        <img src="assets/images/gallery/gallery-2.jpg" alt="BE RANKERS Students" loading="lazy">
+
+                        <div class="gallery-overlay">
+                            <div class="gallery-content">
+                                <span class="gallery-category">Students</span>
+                                <h3>Our Students</h3>
+
+                                <button class="gallery-view" data-bs-toggle="modal" data-bs-target="#galleryModal"
+                                    data-image="assets/images/gallery/gallery-2.jpg" data-title="Our Students">
+                                    <i class="bi bi-arrows-fullscreen"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <!-- Gallery Item 3 -->
+                <div class="col-6 col-md-4 col-lg-3">
+                    <div class="gallery-card">
+                        <img src="assets/images/gallery/gallery-3.jpg" alt="BE RANKERS Classroom Session"
+                            loading="lazy">
+
+                        <div class="gallery-overlay">
+                            <div class="gallery-content">
+                                <span class="gallery-category">Classes</span>
+                                <h3>Interactive Classes</h3>
+
+                                <button class="gallery-view" data-bs-toggle="modal" data-bs-target="#galleryModal"
+                                    data-image="assets/images/gallery/gallery-3.jpg" data-title="Interactive Classes">
+                                    <i class="bi bi-arrows-fullscreen"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <!-- Gallery Item 4 -->
+                <div class="col-6 col-md-4 col-lg-3">
+                    <div class="gallery-card">
+                        <img src="assets/images/gallery/gallery-4.jpg" alt="BE RANKERS Faculty" loading="lazy">
+
+                        <div class="gallery-overlay">
+                            <div class="gallery-content">
+                                <span class="gallery-category">Faculty</span>
+                                <h3>Expert Faculty</h3>
+
+                                <button class="gallery-view" data-bs-toggle="modal" data-bs-target="#galleryModal"
+                                    data-image="assets/images/gallery/gallery-4.jpg" data-title="Expert Faculty">
+                                    <i class="bi bi-arrows-fullscreen"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <!-- Gallery Item 5 -->
+                <div class="col-6 col-md-4 col-lg-3">
+                    <div class="gallery-card">
+                        <img src="assets/images/gallery/gallery-5.jpg" alt="BE RANKERS Student Activity" loading="lazy">
+
+                        <div class="gallery-overlay">
+                            <div class="gallery-content">
+                                <span class="gallery-category">Activities</span>
+                                <h3>Student Activities</h3>
+
+                                <button class="gallery-view" data-bs-toggle="modal" data-bs-target="#galleryModal"
+                                    data-image="assets/images/gallery/gallery-5.jpg" data-title="Student Activities">
+                                    <i class="bi bi-arrows-fullscreen"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <!-- Gallery Item 6 -->
+                <div class="col-6 col-md-4 col-lg-3">
+                    <div class="gallery-card">
+                        <img src="assets/images/gallery/gallery-6.jpg" alt="BE RANKERS Achievement" loading="lazy">
+
+                        <div class="gallery-overlay">
+                            <div class="gallery-content">
+                                <span class="gallery-category">Achievements</span>
+                                <h3>Celebrating Success</h3>
+
+                                <button class="gallery-view" data-bs-toggle="modal" data-bs-target="#galleryModal"
+                                    data-image="assets/images/gallery/gallery-6.jpg" data-title="Celebrating Success">
+                                    <i class="bi bi-arrows-fullscreen"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <!-- Gallery Item 7 -->
+                <div class="col-6 col-md-4 col-lg-3">
+                    <div class="gallery-card">
+                        <img src="assets/images/gallery/gallery-7.jpg" alt="BE RANKERS Seminar" loading="lazy">
+
+                        <div class="gallery-overlay">
+                            <div class="gallery-content">
+                                <span class="gallery-category">Seminar</span>
+                                <h3>Knowledge Sessions</h3>
+
+                                <button class="gallery-view" data-bs-toggle="modal" data-bs-target="#galleryModal"
+                                    data-image="assets/images/gallery/gallery-7.jpg" data-title="Knowledge Sessions">
+                                    <i class="bi bi-arrows-fullscreen"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <!-- Gallery Item 8 -->
+                <div class="col-6 col-md-4 col-lg-3">
+                    <div class="gallery-card">
+                        <img src="assets/images/gallery/gallery-8.jpg" alt="BE RANKERS Coaching Event" loading="lazy">
+
+                        <div class="gallery-overlay">
+                            <div class="gallery-content">
+                                <span class="gallery-category">Events</span>
+                                <h3>Memorable Moments</h3>
+
+                                <button class="gallery-view" data-bs-toggle="modal" data-bs-target="#galleryModal"
+                                    data-image="assets/images/gallery/gallery-8.jpg" data-title="Memorable Moments">
+                                    <i class="bi bi-arrows-fullscreen"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <!-- Gallery Item 9 -->
+                <div class="col-6 col-md-4 col-lg-3">
+                    <div class="gallery-card">
+                        <img src="assets/images/gallery/gallery-9.jpg" alt="BE RANKERS Examination Preparation"
+                            loading="lazy">
+
+                        <div class="gallery-overlay">
+                            <div class="gallery-content">
+                                <span class="gallery-category">Preparation</span>
+                                <h3>Exam Preparation</h3>
+
+                                <button class="gallery-view" data-bs-toggle="modal" data-bs-target="#galleryModal"
+                                    data-image="assets/images/gallery/gallery-9.jpg" data-title="Exam Preparation">
+                                    <i class="bi bi-arrows-fullscreen"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <!-- Gallery Item 10 -->
+                <div class="col-6 col-md-4 col-lg-3">
+                    <div class="gallery-card">
+                        <img src="assets/images/gallery/gallery-10.jpg" alt="BE RANKERS Coaching Group" loading="lazy">
+
+                        <div class="gallery-overlay">
+                            <div class="gallery-content">
+                                <span class="gallery-category">Community</span>
+                                <h3>Learning Together</h3>
+
+                                <button class="gallery-view" data-bs-toggle="modal" data-bs-target="#galleryModal"
+                                    data-image="assets/images/gallery/gallery-10.jpg" data-title="Learning Together">
+                                    <i class="bi bi-arrows-fullscreen"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <!-- Gallery Item 11 -->
+                <div class="col-6 col-md-4 col-lg-3">
+                    <div class="gallery-card">
+                        <img src="assets/images/gallery/gallery-11.jpg" alt="BE RANKERS Guidance Session"
+                            loading="lazy">
+
+                        <div class="gallery-overlay">
+                            <div class="gallery-content">
+                                <span class="gallery-category">Guidance</span>
+                                <h3>Student Guidance</h3>
+
+                                <button class="gallery-view" data-bs-toggle="modal" data-bs-target="#galleryModal"
+                                    data-image="assets/images/gallery/gallery-11.jpg" data-title="Student Guidance">
+                                    <i class="bi bi-arrows-fullscreen"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <!-- Gallery Item 12 -->
+                <div class="col-6 col-md-4 col-lg-3">
+                    <div class="gallery-card">
+                        <img src="assets/images/gallery/gallery-12.jpg" alt="BE RANKERS Success Celebration"
+                            loading="lazy">
+
+                        <div class="gallery-overlay">
+                            <div class="gallery-content">
+                                <span class="gallery-category">Success</span>
+                                <h3>Success Stories</h3>
+
+                                <button class="gallery-view" data-bs-toggle="modal" data-bs-target="#galleryModal"
+                                    data-image="assets/images/gallery/gallery-12.jpg" data-title="Success Stories">
+                                    <i class="bi bi-arrows-fullscreen"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+    <!-- ========== GALLERY IMAGE MODAL ========== -->
+    <div class="modal fade gallery-modal" id="galleryModal" tabindex="-1" aria-hidden="true">
+
+        <div class="modal-dialog modal-dialog-centered modal-xl">
+
+            <div class="modal-content">
+
+                <div class="modal-header">
+                    <h5 class="modal-title" id="galleryModalTitle">
+                        Gallery Image
+                    </h5>
+
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
+                    </button>
+                </div>
+
+                <div class="modal-body">
+                    <img id="galleryModalImage" src="" alt="Gallery Image" class="gallery-modal-image">
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+
+       <!-- ========== FOOTER ========== -->
+    <footer class="footer-section bg-premium-dark text-white py-5">
+        <div class="container-lg">
+            <div class="row g-4">
+                <!-- About Footer -->
+                <div class="col-12 col-md-6 col-lg-3">
+                    <h5 class="footer-title">BE RANKERS COACHING</h5>
+                    <p class="footer-description">
+                        Premium coaching institute dedicated to excellence in education and student success.
+                    </p>
+                </div>
+
+                <!-- Quick Links -->
+                <div class="col-12 col-md-6 col-lg-3">
+                    <h5 class="footer-title">Quick Links</h5>
+                    <ul class="footer-links">
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#courses">Courses</a></li>
+                        <li><a href="#faculty">Faculty</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+
+                <!-- Courses -->
+                <div class="col-12 col-md-6 col-lg-3">
+                    <h5 class="footer-title">Our Courses</h5>
+                    <ul class="footer-links">
+                        <li><a href="#courses">School Classes (8-12)</a></li>
+                        <li><a href="#courses">JEE Preparation</a></li>
+                        <li><a href="#courses">NEET Preparation</a></li>
+                        <li><a href="#courses">MHT-CET Prep</a></li>
+                    </ul>
+                </div>
+
+                <!-- Contact -->
+                <div class="col-12 col-md-6 col-lg-3">
+                    <h5 class="footer-title">Contact Info</h5>
+                    <ul class="footer-contact">
+                        <li>
+                            <i class="bi bi-telephone"></i>
+                            <a href="tel:9373072406">9373072406</a>
+                        </li>
+                        <li>
+                            <i class="bi bi-envelope"></i>
+                            <a href="mailto:dhawareashutosh@gmail.com">dhawareashutosh@gmail.com</a>
+                        </li>
+                        <li>
+                            <i class="bi bi-geo-alt"></i>
+                            Bhiwandi, Maharashtra
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <hr class="footer-divider my-4">
+
+            <div class="row align-items-center">
+                <div class="col-12 col-md-6 text-center text-md-start">
+                    <p class="footer-copyright">
+                        © 2026 BE RANKERS COACHING. All Rights Reserved.
+                    </p>
+                </div>
+                <div class="col-12 col-md-6 text-center text-md-end">
+                    <p class="footer-credits">
+                        Website Designed & Developed by <strong>ARC Stack Web Studio</strong>
+                    </p>
                 </div>
             </div>
         </div>
-
-        <!-- Scroll Indicator -->
-        <!-- <div class="scroll-indicator">
-            <span>Scroll to explore</span>
-            <div class="scroll-arrow">
-                <i class="bi bi-chevron-down"></i>
-            </div>
-        </div> -->
-    </section>
+    </footer>
