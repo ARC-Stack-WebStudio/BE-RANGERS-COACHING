@@ -1,4 +1,268 @@
-.gallery-card img{
-    width: 300px;
-    height: 300px;
+.gallery-card img {
+    width: 100%;
+    height: 100%;
+}
+
+/* =========================================================
+   GALLERY SECTION
+   ========================================================= */
+
+.gallery-section {
+    position: relative;
+    overflow: hidden;
+    background: var(--section-bg, #f8f6f1);
+}
+
+/* Gallery Intro */
+.gallery-section .section-description {
+    max-width: 720px;
+    line-height: 1.8;
+    opacity: 0.78;
+}
+
+/* Gallery Grid */
+.gallery-grid {
+    margin-top: 10px;
+}
+
+/* Gallery Card */
+.gallery-card {
+    position: relative;
+    width: 100%;
+    height: 280px;
+    overflow: hidden;
+    border-radius: 18px;
+    background: #111;
+    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.10);
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+/* Image */
+.gallery-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.65s ease;
+}
+
+/* Overlay */
+.gallery-overlay {
+    position: absolute;
+    inset: 0;
+
+    display: flex;
+    align-items: flex-end;
+
+    padding: 22px;
+
+    background:
+        linear-gradient(
+            to top,
+            rgba(0, 0, 0, 0.85) 0%,
+            rgba(0, 0, 0, 0.35) 45%,
+            rgba(0, 0, 0, 0.05) 100%
+        );
+
+    opacity: 0;
+    transition: opacity 0.4s ease;
+}
+
+/* Content */
+.gallery-content {
+    width: 100%;
+    transform: translateY(18px);
+    transition: transform 0.4s ease;
+}
+
+.gallery-category {
+    display: inline-block;
+    margin-bottom: 6px;
+
+    font-family: "Poppins", sans-serif;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 1.4px;
+    text-transform: uppercase;
+
+    color: #d4af37;
+}
+
+.gallery-content h3 {
+    margin: 0;
+    padding-right: 45px;
+
+    color: #fff;
+    font-family: "Playfair Display", serif;
+    font-size: 21px;
+    font-weight: 700;
+}
+
+/* View Button */
+.gallery-view {
+    position: absolute;
+    right: 20px;
+    bottom: 20px;
+
+    width: 42px;
+    height: 42px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border: 1px solid rgba(255, 255, 255, 0.45);
+    border-radius: 50%;
+
+    background: rgba(255, 255, 255, 0.12);
+    color: #fff;
+
+    backdrop-filter: blur(8px);
+
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.gallery-view:hover {
+    background: #d4af37;
+    border-color: #d4af37;
+    color: #111;
+    transform: rotate(5deg) scale(1.08);
+}
+
+/* Hover */
+.gallery-card:hover {
+    transform: translateY(-7px);
+    box-shadow: 0 20px 45px rgba(0, 0, 0, 0.16);
+}
+
+.gallery-card:hover img {
+    transform: scale(1.08);
+}
+
+.gallery-card:hover .gallery-overlay {
+    opacity: 1;
+}
+
+.gallery-card:hover .gallery-content {
+    transform: translateY(0);
+}
+
+
+/* =========================================================
+   GALLERY MODAL
+   ========================================================= */
+
+.gallery-modal .modal-dialog {
+    max-width: 1100px;
+}
+
+.gallery-modal .modal-content {
+    overflow: hidden;
+    border: none;
+    border-radius: 18px;
+    background: #111;
+    box-shadow: 0 30px 80px rgba(0, 0, 0, 0.45);
+}
+
+.gallery-modal .modal-header {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    background: #111;
+    color: #fff;
+    padding: 16px 22px;
+}
+
+.gallery-modal .modal-title {
+    font-family: "Playfair Display", serif;
+    font-weight: 700;
+}
+
+.gallery-modal .btn-close {
+    filter: invert(1);
+    opacity: 0.8;
+}
+
+.gallery-modal .modal-body {
+    padding: 0;
+    background: #111;
+    text-align: center;
+}
+
+.gallery-modal-image {
+    width: 100%;
+    max-height: 75vh;
+    object-fit: contain;
+    display: block;
+    color: white;
+}
+
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media (max-width: 991.98px) {
+
+    .gallery-card {
+        height: 250px;
+        border-radius: 16px;
+    }
+
+    .gallery-overlay {
+        padding: 18px;
+    }
+
+    .gallery-content h3 {
+        font-size: 19px;
+    }
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 575.98px) {
+
+    .gallery-section {
+        padding-top: 55px !important;
+        padding-bottom: 55px !important;
+    }
+
+    .gallery-grid {
+        --bs-gutter-x: 12px;
+        --bs-gutter-y: 12px;
+    }
+
+    .gallery-card {
+        height: 190px;
+        border-radius: 13px;
+    }
+
+    .gallery-overlay {
+        padding: 12px;
+        opacity: 1;
+    }
+
+    .gallery-content {
+        transform: translateY(0);
+    }
+
+    .gallery-category {
+        font-size: 9px;
+        letter-spacing: 1px;
+    }
+
+    .gallery-content h3 {
+        font-size: 15px;
+        padding-right: 32px;
+    }
+
+    .gallery-view {
+        width: 34px;
+        height: 34px;
+        right: 10px;
+        bottom: 10px;
+        font-size: 12px;
+    }
 }

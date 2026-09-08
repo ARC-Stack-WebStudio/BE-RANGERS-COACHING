@@ -10,25 +10,25 @@ window.addEventListener('scroll', () => {
     } else {
         navbar.classList.remove('scrolled');
     }
-    
+
     updateActiveNav();
 });
 
 // ========== NAVBAR ACTIVE LINK HIGHLIGHTING ==========
 function updateActiveNav() {
     const scrollY = window.scrollY;
-    
+
     navbarLinks.forEach(link => {
         link.classList.remove('active');
-        
+
         const targetId = link.getAttribute('href');
         if (targetId.startsWith('#')) {
             const targetSection = document.querySelector(targetId);
-            
+
             if (targetSection) {
                 const sectionTop = targetSection.offsetTop - 150;
                 const sectionBottom = sectionTop + targetSection.offsetHeight;
-                
+
                 if (scrollY >= sectionTop && scrollY < sectionBottom) {
                     link.classList.add('active');
                 }
@@ -50,13 +50,13 @@ navbarLinks.forEach(link => {
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
         const href = this.getAttribute('href');
-        
+
         if (href !== '#' && document.querySelector(href)) {
             e.preventDefault();
-            
+
             const target = document.querySelector(href);
             const offsetTop = target.offsetTop - 100;
-            
+
             window.scrollTo({
                 top: offsetTop,
                 behavior: 'smooth'
@@ -102,31 +102,31 @@ function animateCounters() {
     counters.forEach((counter, index) => {
         const target = parseInt(counter.getAttribute('data-target'));
         const statCard = counter.closest('.stat-card');
-        
+
         // Add staggered fade-in animation
         statCard.style.animation = `fadeInLeft 0.8s ease-out ${index * 0.15}s both`;
-        
+
         let current = 0;
         const duration = 2500 + (index * 200); // 2.5 seconds, staggered
         const startTime = Date.now();
-        
+
         const updateCounter = () => {
             const elapsed = Date.now() - startTime;
             const progress = Math.min(elapsed / duration, 1);
-            
+
             // Easing function for smooth animation
             const easeOutQuad = 1 - (1 - progress) * (1 - progress);
             current = Math.floor(target * easeOutQuad);
-            
+
             counter.textContent = current;
-            
+
             if (progress < 1) {
                 requestAnimationFrame(updateCounter);
             } else {
                 counter.textContent = target;
             }
         };
-        
+
         updateCounter();
     });
 }
@@ -143,7 +143,7 @@ if (resultsSection) {
             }
         });
     }, { threshold: 0.3 });
-    
+
     observer.observe(resultsSection);
 }
 
@@ -170,29 +170,29 @@ const enquiryModalForm = document.getElementById('enquiryModalForm');
 if (enquiryForm) {
     enquiryForm.addEventListener('submit', (e) => {
         e.preventDefault();
-        
+
         // Get form data
         const studentName = document.getElementById('studentName').value.trim();
         const parentName = document.getElementById('parentName').value.trim();
         const mobile = document.getElementById('mobile').value.trim();
         const studentClass = document.getElementById('studentClass').value;
         const message = document.getElementById('message').value.trim();
-        
+
         // Validate phone number
         if (!isValidPhone(mobile)) {
             showNotification('Please enter a valid 10-digit phone number', 'error');
             return;
         }
-        
+
         // Show success message
         showNotification('Thank you! We will contact you shortly.', 'success');
-        
+
         // Generate WhatsApp message
         const whatsappMessage = generateWhatsAppMessage(studentName, parentName, mobile, studentClass, message);
-        
+
         // Clear form
         enquiryForm.reset();
-        
+
         // Open WhatsApp after a short delay (for user experience)
         setTimeout(() => {
             openWhatsApp(whatsappMessage);
@@ -203,22 +203,22 @@ if (enquiryForm) {
 if (enquiryModalForm) {
     enquiryModalForm.addEventListener('submit', (e) => {
         e.preventDefault();
-        
+
         const studentName = document.getElementById('modalStudentName').value.trim();
         const mobile = document.getElementById('modalMobile').value.trim();
         const studentClass = document.getElementById('modalClass').value;
-        
+
         if (!isValidPhone(mobile)) {
             showNotification('Please enter a valid 10-digit phone number', 'error');
             return;
         }
-        
+
         showNotification('Enquiry submitted! Redirecting to WhatsApp...', 'success');
-        
+
         const whatsappMessage = `Hello BE RANKERS COACHING,\n\nI am interested in the ${studentClass} course.\n\nStudent Name: ${studentName}\nPhone: ${mobile}\n\nPlease share the course details and fees.\n\nThank you!`;
-        
+
         enquiryModalForm.reset();
-        
+
         setTimeout(() => {
             openWhatsApp(whatsappMessage);
             // Close modal
@@ -269,14 +269,14 @@ function showNotification(message, type = 'info') {
         box-shadow: 0 4px 12px rgba(0,0,0,0.15);
         animation: slideInRight 0.4s ease-out;
     `;
-    
+
     notification.innerHTML = `
         ${message}
         <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
     `;
-    
+
     document.body.appendChild(notification);
-    
+
     // Auto remove after 4 seconds
     setTimeout(() => {
         notification.remove();
@@ -347,10 +347,10 @@ const courseDetails = {
 };
 
 document.querySelectorAll('[data-bs-target="#courseModal"]').forEach(button => {
-    button.addEventListener('click', function() {
+    button.addEventListener('click', function () {
         const course = this.getAttribute('data-course');
         const details = courseDetails[course];
-        
+
         if (details) {
             courseModalBody.innerHTML = `
                 <div class="course-details">
@@ -390,7 +390,7 @@ phoneInputs.forEach(input => {
 document.addEventListener('click', (e) => {
     const navbar = document.querySelector('.navbar');
     const navbarToggler = document.querySelector('.navbar-toggler');
-    
+
     if (navbarCollapse && navbarCollapse.classList.contains('show')) {
         if (!navbar.contains(e.target)) {
             navbarToggler.click();
@@ -400,7 +400,7 @@ document.addEventListener('click', (e) => {
 
 // ========== PLACEHOLDER IMAGE HANDLING ==========
 document.querySelectorAll('img').forEach(img => {
-    img.addEventListener('error', function() {
+    img.addEventListener('error', function () {
         this.src = 'data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22400%22 height=%22300%22%3E%3Crect fill=%22%23f0f0f0%22 width=%22400%22 height=%22300%22/%3E%3Ctext x=%2250%25%22 y=%2250%25%22 dominant-baseline=%22middle%22 text-anchor=%22middle%22 font-family=%22Arial%22 font-size=%2220%22 fill=%22%23999%22%3EImage Placeholder%3C/text%3E%3C/svg%3E';
         this.style.backgroundColor = '#f0f0f0';
     });
@@ -409,7 +409,7 @@ document.querySelectorAll('img').forEach(img => {
 // ========== VIDEO FALLBACK ==========
 const heroVideo = document.querySelector('.hero-video');
 if (heroVideo) {
-    heroVideo.addEventListener('error', function() {
+    heroVideo.addEventListener('error', function () {
         this.style.display = 'none';
     });
 }
@@ -424,7 +424,7 @@ document.addEventListener('keydown', (e) => {
             bootstrapModal.hide();
         });
     }
-    
+
     // Back to top on Ctrl+Home
     if (e.ctrlKey && e.key === 'Home') {
         e.preventDefault();
@@ -451,7 +451,7 @@ window.addEventListener('load', () => {
     if (loader) {
         loader.style.display = 'none';
     }
-    
+
     // Initialize popovers and tooltips
     const tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'));
     tooltipTriggerList.map(function (tooltipTriggerEl) {
@@ -471,12 +471,12 @@ if (window.performance && window.performance.timing) {
 // ========== ACCESSIBILITY ENHANCEMENTS ==========
 // Add focus outline to interactive elements
 document.querySelectorAll('a, button, input, select, textarea').forEach(element => {
-    element.addEventListener('focus', function() {
+    element.addEventListener('focus', function () {
         this.style.outline = '2px solid var(--accent)';
         this.style.outlineOffset = '2px';
     });
-    
-    element.addEventListener('blur', function() {
+
+    element.addEventListener('blur', function () {
         this.style.outline = 'none';
     });
 });
@@ -485,3 +485,56 @@ document.querySelectorAll('a, button, input, select, textarea').forEach(element 
 console.log('%c BE RANKERS COACHING', 'font-size: 24px; font-weight: bold; color: #C9A227; font-family: Arial;');
 console.log('%c Premium Coaching Website', 'font-size: 14px; color: #0B1F3A;');
 console.log('Website by ARC Stack Web Studio');
+
+
+
+
+
+/* =========================================================
+   GALLERY MODAL
+   ========================================================= */
+
+document.addEventListener("DOMContentLoaded", function () {
+
+    const galleryModal = document.getElementById("galleryModal");
+    const galleryModalImage = document.getElementById("galleryModalImage");
+    const galleryModalTitle = document.getElementById("galleryModalTitle");
+
+    if (!galleryModal) {
+        console.error("Gallery modal not found!");
+        return;
+    }
+
+    galleryModal.addEventListener("show.bs.modal", function (event) {
+
+        const button = event.relatedTarget;
+
+        if (!button) {
+            return;
+        }
+
+        const image = button.getAttribute("data-image");
+        const title = button.getAttribute("data-title");
+
+        console.log("Gallery Image:", image);
+        console.log("Gallery Title:", title);
+
+        if (image) {
+            galleryModalImage.src = image;
+        }
+
+        if (title) {
+            galleryModalTitle.textContent = title;
+            galleryModalImage.alt = title;
+        }
+    });
+
+    galleryModal.addEventListener("hidden.bs.modal", function () {
+
+        galleryModalImage.src = "";
+        galleryModalImage.alt = "Gallery Image";
+        galleryModalTitle.textContent = "Gallery Image";
+
+    });
+
+});
