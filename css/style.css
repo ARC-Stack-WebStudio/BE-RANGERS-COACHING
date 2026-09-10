@@ -789,6 +789,11 @@ a:hover {
     margin-bottom: 0;
 }
 
+.Why-Choose-Section{
+    display: flex;
+    justify-content: center;
+}
+
 /* ========== RESULTS SECTION ========== */
 .results-section {
     padding: 5rem 0;
