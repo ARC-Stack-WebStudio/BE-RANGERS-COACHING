@@ -175,6 +175,7 @@ if (enquiryForm) {
         const studentName = document.getElementById('studentName').value.trim();
         const parentName = document.getElementById('parentName').value.trim();
         const mobile = document.getElementById('mobile').value.trim();
+        const enquiryType = document.getElementById('enquiryType').value;
         const studentClass = document.getElementById('studentClass').value;
         const message = document.getElementById('message').value.trim();
 
@@ -188,48 +189,35 @@ if (enquiryForm) {
         showNotification('Thank you! We will contact you shortly.', 'success');
 
         // Generate WhatsApp message
-        const whatsappMessage = generateWhatsAppMessage(studentName, parentName, mobile, studentClass, message);
+        const whatsappMessage = `Hello BE RANKERS COACHING,
+
+I would like to make an enquiry.
+
+Enquiry For: ${enquiryType}
+
+Student Name: ${studentName}
+Parent Name: ${parentName}
+Mobile Number: ${mobile}
+         Class / Course: ${studentClass}
+
+         Message:
+         ${message || 'No additional message provided.'}
+
+         Please share the relevant details.
+
+         Thank you!`;
 
         // Clear form
         enquiryForm.reset();
 
-        // Open WhatsApp after a short delay (for user experience)
+        // Open WhatsApp after a short delay
         setTimeout(() => {
             openWhatsApp(whatsappMessage);
         }, 500);
     });
 }
 
-if (enquiryModalForm) {
-    enquiryModalForm.addEventListener('submit', (e) => {
-        e.preventDefault();
 
-        const studentName = document.getElementById('modalStudentName').value.trim();
-        const mobile = document.getElementById('modalMobile').value.trim();
-        const studentClass = document.getElementById('modalClass').value;
-
-        if (!isValidPhone(mobile)) {
-            showNotification('Please enter a valid 10-digit phone number', 'error');
-            return;
-        }
-
-        showNotification('Enquiry submitted! Redirecting to WhatsApp...', 'success');
-
-        const whatsappMessage = `Hello BE RANKERS COACHING,\n\nI am interested in the ${studentClass} course.\n\nStudent Name: ${studentName}\nPhone: ${mobile}\n\nPlease share the course details and fees.\n\nThank you!`;
-
-        enquiryModalForm.reset();
-
-        setTimeout(() => {
-            openWhatsApp(whatsappMessage);
-            // Close modal
-            const modal = document.querySelector('.modal.show');
-            if (modal) {
-                const bootstrapModal = new window.bootstrap.Modal(modal);
-                bootstrapModal.hide();
-            }
-        }, 500);
-    });
-}
 
 // ========== FORM VALIDATION HELPERS ==========
 function isValidPhone(phone) {
@@ -538,3 +526,228 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
 });
+
+
+
+
+
+
+
+
+
+
+
+// FEES Payment Direct 
+// ========== FEES PAYMENT DIRECT ==========
+
+const feesPaymentForm = document.getElementById('feesPaymentForm');
+const paymentClass = document.getElementById('paymentClass');
+const paymentInstallment = document.getElementById('paymentInstallment');
+const paymentAmountBox = document.getElementById('paymentAmountBox');
+const paymentAmount = document.getElementById('paymentAmount');
+const paymentMessageBox = document.getElementById('paymentMessageBox');
+const paymentMessage = document.getElementById('paymentMessage');
+
+
+// ==========================================
+// COURSE FEES
+// Change the fees here whenever required
+// ==========================================
+
+const courseFees = {
+    "Class 8": 20000,
+    "Class 9": 25000,
+    "Class 10": 35000,
+    "Class 11-12": 40000,
+    "JEE": 50000,
+    "NEET": 50000,
+    "MHT-CET": 45000
+};
+
+
+// ==========================================
+// CALCULATE INSTALLMENT AMOUNT
+// ==========================================
+
+function updatePaymentAmount() {
+
+    const selectedClass = paymentClass.value;
+    const selectedInstallment = paymentInstallment.value;
+
+    // Reset if nothing selected
+    if (!selectedClass || !selectedInstallment) {
+
+        paymentAmountBox.style.display = 'none';
+        paymentMessageBox.style.display = 'none';
+
+        return;
+    }
+
+    // Get total course fees
+    const totalFees = courseFees[selectedClass];
+
+    if (!totalFees) {
+
+        paymentAmountBox.style.display = 'none';
+        paymentMessageBox.style.display = 'none';
+
+        return;
+    }
+
+    // Two equal installments
+    const installmentAmount = totalFees / 2;
+
+    // Display amount
+    paymentAmount.textContent =
+        `₹${installmentAmount.toLocaleString('en-IN')}`;
+
+    paymentAmountBox.style.display = 'block';
+
+
+    // Message based on installment
+    if (selectedInstallment === 'Installment 1') {
+
+        paymentMessage.textContent =
+            `Total course fees: ₹${totalFees.toLocaleString('en-IN')}. ` +
+            `You are selecting Installment 1. ` +
+            `Amount payable now: ₹${installmentAmount.toLocaleString('en-IN')}.`;
+
+    } else {
+
+        paymentMessage.textContent =
+            `Total course fees: ₹${totalFees.toLocaleString('en-IN')}. ` +
+            `You are selecting Installment 2. ` +
+            `Amount payable now: ₹${installmentAmount.toLocaleString('en-IN')}.`;
+
+    }
+
+    paymentMessageBox.style.display = 'block';
+}
+
+
+// ==========================================
+// UPDATE AMOUNT WHEN CLASS CHANGES
+// ==========================================
+
+if (paymentClass) {
+
+    paymentClass.addEventListener('change', updatePaymentAmount);
+
+}
+
+
+// ==========================================
+// UPDATE AMOUNT WHEN INSTALLMENT CHANGES
+// ==========================================
+
+if (paymentInstallment) {
+
+    paymentInstallment.addEventListener('change', updatePaymentAmount);
+
+}
+
+
+// ==========================================
+// FORM SUBMISSION
+// ==========================================
+
+if (feesPaymentForm) {
+
+    feesPaymentForm.addEventListener('submit', (e) => {
+
+        e.preventDefault();
+
+
+        const studentName =
+            document.getElementById('paymentStudentName')
+                .value.trim();
+
+        const mobile =
+            document.getElementById('paymentMobile')
+                .value.trim();
+
+        const studentClass =
+            document.getElementById('paymentClass')
+                .value;
+
+        const installment =
+            document.getElementById('paymentInstallment')
+                .value;
+
+
+        // Validate mobile
+        if (!isValidPhone(mobile)) {
+
+            showNotification(
+                'Please enter a valid 10-digit phone number',
+                'error'
+            );
+
+            return;
+        }
+
+
+        // Get total fees
+        const totalFees = courseFees[studentClass];
+
+        // Calculate installment
+        const installmentAmount = totalFees / 2;
+
+
+        // WhatsApp payment message
+        const whatsappMessage =
+            `Hello BE RANKERS COACHING,
+
+           I would like to make a fees payment enquiry.
+
+           Student Name: ${studentName}
+           Mobile Number: ${mobile}
+           Class / Course: ${studentClass}
+
+           Total Course Fees: ₹${totalFees.toLocaleString('en-IN')}
+           Selected Payment: ${installment}
+           Amount Payable: ₹${installmentAmount.toLocaleString('en-IN')}
+
+           Please share the payment details / payment link to complete the payment.
+
+           Thank you!`;
+
+
+        // Success notification
+        showNotification(
+            'Payment details prepared! Redirecting to WhatsApp...',
+            'success'
+        );
+
+
+        // Reset form
+        feesPaymentForm.reset();
+
+        paymentAmountBox.style.display = 'none';
+        paymentMessageBox.style.display = 'none';
+
+
+        // Open WhatsApp
+        setTimeout(() => {
+
+            openWhatsApp(whatsappMessage);
+
+
+            // Close modal
+            const modalElement =
+                document.getElementById('feesPaymentModal');
+
+            if (modalElement) {
+
+                const bootstrapModal =
+                    window.bootstrap.Modal.getInstance(modalElement) ||
+                    new window.bootstrap.Modal(modalElement);
+
+                bootstrapModal.hide();
+            }
+
+        }, 500);
+
+    });
+
+}

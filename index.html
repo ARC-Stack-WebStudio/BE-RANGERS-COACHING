@@ -1490,14 +1490,16 @@
             <div class="row align-items-center">
                 <div class="col-12 col-lg-8">
                     <h2 class="text-white mb-3">Ready to Take the Next Step?</h2>
+
                     <p class="text-white fs-5">
                         Join hundreds of successful students at BE RANKERS COACHING and start your journey towards
                         academic excellence.
                     </p>
                 </div>
+
                 <div class="col-12 col-lg-4 text-center text-lg-end mt-4 mt-lg-0">
-                    <button class="btn btn-cta-large" data-bs-toggle="modal" data-bs-target="#enquiryModal">
-                        Enquire Now
+                    <button class="btn btn-cta-large" data-bs-toggle="modal" data-bs-target="#feesPaymentModal">
+                        Pay Now
                     </button>
                 </div>
             </div>
@@ -1595,6 +1597,25 @@
                                 placeholder="Enter mobile number" required>
                         </div>
 
+                        <!-- Enquiry Type -->
+                        <div class="mb-3">
+                            <label for="enquiryType" class="form-label">Enquiry For</label>
+                            <select class="form-control" id="enquiryType" name="enquiryType" required>
+                                <option value="">Select Enquiry Type</option>
+                                <option value="Course / Admission Enquiry">Course / Admission Enquiry</option>
+                                <option value="Fees Related Enquiry">Fees Related Enquiry</option>
+                                <option value="Seat Availability">Seat Availability</option>
+                                <option value="Batch Timing Enquiry">Batch Timing Enquiry</option>
+                                <option value="Demo Class Enquiry">Demo Class Enquiry</option>
+                                <option value="Appointment / Counselling">Appointment / Counselling</option>
+                                <option value="Scholarship / Discount Enquiry">Scholarship / Discount Enquiry</option>
+                                <option value="Subject / Course Details">Subject / Course Details</option>
+                                <option value="Test Series / Study Material">Test Series / Study Material</option>
+                                <option value="Other Enquiry">Other Enquiry</option>
+                            </select>
+                        </div>
+
+                        <!-- Class / Course -->
                         <div class="mb-3">
                             <label for="studentClass" class="form-label">Class / Course</label>
                             <select class="form-control" id="studentClass" name="studentClass" required>
@@ -1607,12 +1628,6 @@
                                 <option value="NEET">NEET Preparation</option>
                                 <option value="MHT-CET">MHT-CET Preparation</option>
                             </select>
-                        </div>
-
-                        <div class="mb-3">
-                            <label for="preferredBatch" class="form-label">Preferred Batch Timing</label>
-                            <input type="text" class="form-control" id="preferredBatch" name="preferredBatch"
-                                placeholder="e.g., Morning / Evening">
                         </div>
 
                         <div class="mb-3">
@@ -1719,45 +1734,149 @@
 
     <!-- ========== MODALS ========== -->
 
-    <!-- Enquiry Modal -->
-    <div class="modal fade" id="enquiryModal" tabindex="-1" aria-labelledby="enquiryModalLabel" aria-hidden="true">
+    <!-- ========== FEES PAYMENT MODAL ========== -->
+    <div class="modal fade" id="feesPaymentModal" tabindex="-1" aria-labelledby="feesPaymentModalLabel"
+        aria-hidden="true">
+
         <div class="modal-dialog modal-dialog-centered">
             <div class="modal-content modal-premium">
+
                 <div class="modal-header border-0">
-                    <h5 class="modal-title" id="enquiryModalLabel">Quick Enquiry Form</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    <h5 class="modal-title" id="feesPaymentModalLabel">
+                        Fees Payment
+                    </h5>
+
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
+                    </button>
                 </div>
+
                 <div class="modal-body">
-                    <form class="enquiry-modal-form" id="enquiryModalForm">
+
+                    <form class="enquiry-modal-form" id="feesPaymentForm">
+
+                        <!-- Student Name -->
                         <div class="mb-3">
-                            <label for="modalStudentName" class="form-label">Student Name</label>
-                            <input type="text" class="form-control" id="modalStudentName" name="studentName" required>
+                            <label for="paymentStudentName" class="form-label">
+                                Student Name
+                            </label>
+
+                            <input type="text" class="form-control" id="paymentStudentName" name="studentName"
+                                placeholder="Enter student name" required>
                         </div>
+
+                        <!-- Mobile -->
                         <div class="mb-3">
-                            <label for="modalMobile" class="form-label">Mobile Number</label>
-                            <input type="tel" class="form-control" id="modalMobile" name="mobile" required>
+                            <label for="paymentMobile" class="form-label">
+                                Mobile Number
+                            </label>
+
+                            <input type="tel" class="form-control" id="paymentMobile" name="mobile"
+                                placeholder="Enter 10-digit mobile number" maxlength="10" required>
                         </div>
+
+                        <!-- Class / Course -->
                         <div class="mb-3">
-                            <label for="modalClass" class="form-label">Class / Course</label>
-                            <select class="form-control" id="modalClass" name="studentClass" required>
+                            <label for="paymentClass" class="form-label">
+                                Class / Course
+                            </label>
+
+                            <select class="form-control" id="paymentClass" name="studentClass" required>
+
                                 <option value="">Select Class/Course</option>
-                                <option value="Class 8">Class 8</option>
-                                <option value="Class 9">Class 9</option>
-                                <option value="Class 10">Class 10</option>
-                                <option value="Class 11-12">Class 11-12</option>
-                                <option value="JEE">JEE Preparation</option>
-                                <option value="NEET">NEET Preparation</option>
-                                <option value="MHT-CET">MHT-CET Preparation</option>
+
+                                <option value="Class 8">
+                                    Class 8
+                                </option>
+
+                                <option value="Class 9">
+                                    Class 9
+                                </option>
+
+                                <option value="Class 10">
+                                    Class 10
+                                </option>
+
+                                <option value="Class 11-12">
+                                    Class 11-12
+                                </option>
+
+                                <option value="JEE">
+                                    JEE Preparation
+                                </option>
+
+                                <option value="NEET">
+                                    NEET Preparation
+                                </option>
+
+                                <option value="MHT-CET">
+                                    MHT-CET Preparation
+                                </option>
+
                             </select>
                         </div>
+
+                        <!-- Installment -->
+                        <div class="mb-3">
+                            <label for="paymentInstallment" class="form-label">
+                                Select Installment
+                            </label>
+
+                            <select class="form-control" id="paymentInstallment" name="installment" required>
+
+                                <option value="">
+                                    Select Installment
+                                </option>
+
+                                <option value="Installment 1">
+                                    Installment 1
+                                </option>
+
+                                <option value="Installment 2">
+                                    Installment 2
+                                </option>
+
+                            </select>
+                        </div>
+
+                        <!-- Amount Display -->
+                        <div class="mb-3" id="paymentAmountBox" style="display: none;">
+
+                            <label class="form-label">
+                                Amount Payable
+                            </label>
+
+                            <div class="form-control fw-bold" id="paymentAmount" style="background: #f8f6f2;">
+                                ₹0
+                            </div>
+
+                        </div>
+
+                        <!-- Payment Message -->
+                        <div class="mb-3" id="paymentMessageBox" style="display: none;">
+
+                            <div class="p-3 rounded" style="background: #f8f6f2;">
+
+                                <small id="paymentMessage" class="text-muted">
+                                </small>
+
+                            </div>
+
+                        </div>
+
                         <button type="submit" class="btn btn-modal-submit w-100">
-                            Send Enquiry
+
+                            <i class="bi bi-whatsapp"></i>
+                            Proceed to Payment
                         </button>
+
                     </form>
+
                 </div>
             </div>
         </div>
     </div>
+
+    
 
     <!-- Course Details Modal -->
     <div class="modal fade" id="courseModal" tabindex="-1" aria-labelledby="courseModalLabel" aria-hidden="true">
